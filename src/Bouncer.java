@@ -15,6 +15,7 @@ public class Bouncer {
 
         bouncer.barkAnimal(tiger);
         bouncer.barkAnimal(lion);           // lion is object of BarkablePredator, which inherits Barkable and Predator, so it can be worked.
+
     }
 
 }

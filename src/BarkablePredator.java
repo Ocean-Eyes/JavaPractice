@@ -1,2 +1,2 @@
-public interface BarkablePredator extends Predator, Barkable{
+public interface BarkablePredator extends Predator, Barkable {
 }
