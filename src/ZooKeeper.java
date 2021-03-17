@@ -1,9 +1,5 @@
 public class ZooKeeper {
 
-    // Use an interface, 'Predator' to avoid implementing method, 'feed'.
-    // Then, programmer just need to implement getFood() in each class.
-    // And there's no need to overload an method, 'feed' like below when you do that.
-
     /* public void feed(Crocodile crocodile) {
             System.out.println("feed strawberry");
      }
@@ -14,6 +10,9 @@ public class ZooKeeper {
      }
     */
 
+    // Use an interface, 'Predator' to avoid implementing method, 'feed' repeatedly.
+    // Then, programmer just need to implement getFood() in each class.
+    // And there's no need to overload an method, 'feed' like above when you do that.
     public void feed(Predator predator)
     {
         System.out.println("feed " + predator.getFood());
@@ -26,7 +25,6 @@ public class ZooKeeper {
         Lion lion = new Lion();
         ZooKeeper zookeeper = new ZooKeeper();
 
-        //
         zookeeper.feed(tiger);
         zookeeper.feed(lion);
     }
