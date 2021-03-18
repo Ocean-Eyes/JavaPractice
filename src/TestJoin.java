@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
-public class TestJoin extends Thread {
+// It can be chosen as 'extends Thread' or 'implements Runnable' depending on purpose
+public class TestJoin implements Runnable {
 
     int seq;
 
@@ -29,7 +30,7 @@ public class TestJoin extends Thread {
         ArrayList<Thread> alt = new ArrayList<Thread>();
         for(int i = 0; i < 10; i++)
         {
-            Thread tj = new TestJoin(i);
+            Thread tj = new Thread(new TestJoin(i));    // If the file inherits Thread, you can write as Thread tj = new TestJoin(i)
             tj.start();
             alt.add(tj);                                // Add objects that extend Thread into ArrayList<Thread>
         }
