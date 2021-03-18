@@ -27,7 +27,7 @@ public class TestJoin implements Runnable {
 
     public static void main(String[] args)
     {
-        ArrayList<Thread> alt = new ArrayList<Thread>();
+        ArrayList<Thread> alt = new ArrayList<>();
         for(int i = 0; i < 10; i++)
         {
             Thread tj = new Thread(new TestJoin(i));    // If the file inherits Thread, you can write as Thread tj = new TestJoin(i)
@@ -35,15 +35,10 @@ public class TestJoin implements Runnable {
             alt.add(tj);                                // Add objects that extend Thread into ArrayList<Thread>
         }
 
-        for(int j = 0; j < alt.size(); j++)
-        {
-            Thread t = alt.get(j);
-            try
-            {
+        for (Thread t : alt) {
+            try {
                 t.join();                           // It helps threads to wait until all of them will end.
-            }
-            catch (Exception e)
-            {
+            } catch (Exception e) {
 
             }
         }
