@@ -17,6 +17,7 @@ public class TestException {
             c = 4/0;
         }
         // This grammar helps running codes that suggest another codes when an exception happens.
+        // In this case, ArithmeticException will happen after running code because a number can't be divide by 0.
         catch(ArithmeticException e)
         {
             c = -1;
